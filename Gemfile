@@ -8,8 +8,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '>= 3.2'
-gem 'bcrypt-ruby', '~> 3.1.5', require: "bcrypt"
 gem 'devise', '~> 3.4.1'
+gem "paperclip", "~> 4.3"
 
 group :development do
   gem 'byebug'

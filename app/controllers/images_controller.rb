@@ -4,7 +4,7 @@ class ImagesController < ApplicationController
   end
 
   def show
-
+    @image = Image.find(params[:id])
   end
 
   def new
@@ -17,6 +17,7 @@ class ImagesController < ApplicationController
       flash[:notice] = "Upload successful!"
       redirect_to images_path
     else
+
       render :new
     end
   end
@@ -32,6 +33,6 @@ class ImagesController < ApplicationController
 
 private
   def image_params
-    params.require(:image).permit(:description)
+    params.require(:image).permit(:description, :image)
   end
 end
