@@ -3,3 +3,14 @@
 <h1>test</h1>
 
 </div>
+
+<% if @images.any? %>
+  <ul>
+    <% @images.each do |image| %>
+      <li><%= image.description %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<p><%= link_to "Upload", new_image_path %></p>
