@@ -3,8 +3,9 @@
 <p><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></p>
 
 <h1>test</h1>
-
-
+<% if current_user %>
+  <p>Logged in as <%= current_user.name %>.</p>
+<% end %>
 
 <% if @images.any? %>
   <ul>

@@ -1,0 +1,20 @@
+<h1>profile page</h1>
+
+
+<%= current_user.name%>
+
+
+
+<h1>Uploaded Images</h1>
+
+<ul>
+  <% @user.images.each do |image|%>
+    <li styles="inline"> <%= image_tag image.image.url(:medium) %> | <%= image.description %>
+      <% if current_user %>
+      | <%= link_to "Edit", edit_image_path(image)%> |
+      <%= link_to "Delete", image_path(image), method: :delete %>
+      <% end  %>
+    </li>
+
+  <% end %>
+</ul>

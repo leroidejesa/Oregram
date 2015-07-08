@@ -10,4 +10,12 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :email, :password) }
       devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:email, :name, :password, :current_password, :avatar) }
   end
+
+  #changes default route of devise to specific route after login
+  def after_sign_in_path_for(user)
+    user_path(user)
+  end
+  def after_update_path_for(user)
+    user_path(user)
+  end
 end
