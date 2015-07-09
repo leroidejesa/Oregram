@@ -1,8 +1,8 @@
-<p><%= link_to "Sign Up", new_user_registration_path %></p>
-<p><%= link_to "Sign In", new_user_session_path %></p>
-<p><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></p>
+<div class="masthead">
 
-<h1>test</h1>
+  <p class="pc">Insta-U</p>
+
+</div>
 <% if current_user %>
   <p>Logged in as <%= current_user.name %>.</p>
 <% end %>
@@ -11,6 +11,7 @@
   <ul>
     <% @images.each do |image| %>
       <li><%= image.description %></li>
+      <li><%= image_tag image.image.url(:thumb) %> </li>
     <% end %>
   </ul>
 <% end %>

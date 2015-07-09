@@ -15,7 +15,7 @@ class ImagesController < ApplicationController
     @image = current_user.images.build(image_params)
     if @image.save
       flash[:notice] = "Upload successful!"
-      redirect_to images_path
+      redirect_to user_path(current_user)
     else
 
       render :new
@@ -23,12 +23,23 @@ class ImagesController < ApplicationController
   end
 
   def edit
+    @image = Image.find(params[:id])
+
   end
 
   def update
+    @image = Image.find(params[:id])
+    if @image.update(image_params)
+      redirect_to user_path(current_user)
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @image = Image.find(params[:id])
+    @image.destroy
+    redirect_to user_path(current_user)
   end
 
 private
