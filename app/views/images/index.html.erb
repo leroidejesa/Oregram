@@ -1,20 +1,19 @@
-<div class="masthead">
-
-  <p class="pc">Insta-U</p>
-
-</div>
-<% if current_user %>
-  <p>Logged in as <%= current_user.name %>.</p>
-<% end %>
-
+<div class="home">
 <% if @images.any? %>
-  <ul>
+
     <% @images.each do |image| %>
-      <li><%= image.description %></li>
-      <li><%= image_tag image.image.url(:thumb) %> </li>
-    <% end %>
-  </ul>
+    <div class="row">
+     <div class="home-scroll">
+       <div class="home-avatar">
+         <%= image_tag image.user.avatar.url(:thumb), class:"round-image-50"%><span class="upload-time"><%= distance_of_time_in_words(image.created_at, Time.now) %> ago</span>
+       <hr>
+       </div>
+       <%= image_tag image.image.url(:large), class: "each-img" %>
+       <div class="description"><%= link_to image.user.name, user_path(image.user) %> <%= image.description %></div>
+     </div>
+       <br><br><br>
+   </div>
+   <% end %>
+
 <% end %>
-
-
-<p><%= link_to "Upload", new_image_path %></p>
+</div>

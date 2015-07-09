@@ -11,7 +11,7 @@ gem 'sass-rails', '>= 3.2'
 gem 'devise', '~> 3.4.1'
 gem "paperclip", "~> 4.3"
 gem "factory_girl_rails"
-gem "rails_12factor", group: :production
+gem "rails_12factor", group: :production #heroku deployment
 
 group :development do
   gem 'byebug'
