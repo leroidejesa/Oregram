@@ -114,8 +114,31 @@ hr{
 
 .blue {
   background-color: #2953A6;
+  color: white;
+}
+
+.blue a {
+  margin-top:12px;
+  color:white;
+}
+
+.blue a:hover {
+  background-color: #2953A6;
 }
 
 .home {
   margin-top: 50px;
+}
+
+a:hover {
+  text-decoration:none;
+}
+
+.heart {
+  padding: 10px;
+  color: grey;
+}
+
+.comment {
+  color: grey;
 }

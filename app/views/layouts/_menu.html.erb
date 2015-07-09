@@ -1,15 +1,14 @@
-<div class="blue navbar-inverse collapse navbar-collapse" id="navbar-collapse-1">
+<div class="blue collapse navbar-collapse" id="navbar-collapse-1">
     <ul class="nav navbar-nav navbar-left">
 
-      <div id="logo"><li>Mutant-gram</li></div>
+      <div id="logo"><li><%= link_to "Mutant-gram", '/' %></li></div>
 
     </ul>
-    <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", '/' %></li>
+    <ul class="white nav navbar-nav navbar-right">
+
         <% if current_user %>
-          <li><%= link_to 'Profile', user_path(current_user) %> </li>
-          <li><%= link_to "Upload", new_image_path %></li>
-          <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
+          <li><%= link_to current_user.name, user_path(current_user) %> </li>
+
           <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
           <% if current_user.avatar == nil %>
             <li class="round-image-50"><%= image_tag(current_user.avatar.url(:thumb)) %></li>

@@ -2,19 +2,31 @@
   "RSpec": {
     "coverage": {
       "/Users/Guest/Desktop/instagram-clone/spec/features/sign_in_path_spec.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/instagram-clone/spec/models/user_spec.rb": [
         1,
+        null,
+        1,
+        2,
         null,
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
         null,
         null
       ],
@@ -599,77 +611,8 @@
       "/Users/Guest/Desktop/instagram-clone/app/helpers/application_helper.rb": [
         1,
         null
-      ],
-      "/Users/Guest/Desktop/instagram-clone/spec/models/user_spec.rb": [
-        1,
-        null,
-        1,
-        2,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Guest/Desktop/instagram-clone/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        0,
-        null,
-        null
-      ],
-      "/Users/Guest/Desktop/instagram-clone/app/controllers/users_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/Guest/Desktop/instagram-clone/app/models/image.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null
       ]
     },
-    "timestamp": 1436469241
+    "timestamp": 1436483972
   }
 }

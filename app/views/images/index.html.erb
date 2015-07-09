@@ -10,6 +10,10 @@
        </div>
        <%= image_tag image.image.url(:large), class: "each-img" %>
        <div class="description"><%= link_to image.user.name, user_path(image.user) %> <%= image.description %></div>
+       <hr>
+       <p class="heart glyphicon glyphicon-heart-empty"></p><span class="comment">Add a comment...</span>
+
+
      </div>
        <br><br><br>
    </div>
