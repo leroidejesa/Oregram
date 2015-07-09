@@ -61,3 +61,16 @@ body {
   background-color: rgb(255,255,240);
   padding: 0px;
 }
+
+.crop {
+
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+}
+
+.crop .img-p {
+  display:block;
+  height: auto !important;
+  width: 300px !important;
+}

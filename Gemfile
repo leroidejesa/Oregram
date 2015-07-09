@@ -10,6 +10,7 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '>= 3.2'
 gem 'devise', '~> 3.4.1'
 gem "paperclip", "~> 4.3"
+gem "factory_girl_rails"
 
 group :development do
   gem 'byebug'
@@ -26,6 +27,5 @@ end
 group :test do
   gem 'shoulda-matchers'
   gem 'capybara'
-  gem 'factory_girl_rails'
   gem 'simplecov', require: false
 end
