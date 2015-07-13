@@ -4,15 +4,24 @@
     <% @images.each do |image| %>
     <div class="row">
      <div class="home-scroll">
-       <div class="home-avatar">
+       <div class="home-avatar" id="<%= image.id %>">
          <%= image_tag image.user.avatar.url(:thumb), class:"round-image-50"%><span class="upload-time"><%= distance_of_time_in_words(image.created_at, Time.now) %> ago</span>
        <hr>
        </div>
        <%= image_tag image.image.url(:large), class: "each-img" %>
        <div class="description"><%= link_to image.user.name, user_path(image.user) %> <%= image.description %></div>
        <hr>
-       <p class="heart glyphicon glyphicon-heart-empty"></p><span class="comment">Add a comment...</span>
-
+       <ul id="image_comments">
+         <% if image.comments.any? %>
+           <% image.comments.each do |comment| %>
+            <li><%= comment.text %></li>
+           <% end %>
+        <% else %>
+          <p>none yet!</p>
+        <% end %>
+       </ul>
+       <!-- <p class="heart glyphicon glyphicon-heart-empty"></p><span class="comment">Add a comment...</span> -->
+       <p><%= link_to "Add a comment...", new_image_comment_path(image), id: "new_comment_link", class: "btn btn-default", remote: true %></p>
 
      </div>
        <br><br><br>

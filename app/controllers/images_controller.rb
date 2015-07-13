@@ -1,6 +1,8 @@
 class ImagesController < ApplicationController
   def index
     @images = Image.all.order(created_at: :desc)
+    # @comment = Image.find(params[:id]).comments.new(comment_params)
+
 # sorts array by order created
   end
 
@@ -45,6 +47,6 @@ class ImagesController < ApplicationController
 
 private
   def image_params
-    params.require(:image).permit(:description, :image)
+    params.require(:image).permit(:description, :image, :comment)
   end
 end

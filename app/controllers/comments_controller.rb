@@ -2,17 +2,18 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
 
   # GET /comments
-  def index
-    @comments = Comment.all
-  end
+  # def index
+  #   @comments = Comment.all
+  # end
 
   # GET /comments/1
-  def show
-  end
+  # def show
+  # end
 
   # GET /comments/new
   def new
-    @comment = Comment.new
+    @image = Image.find(params[:image_id])
+    @comment = @image.comments.new
   end
 
   # GET /comments/1/edit
@@ -21,10 +22,14 @@ class CommentsController < ApplicationController
 
   # POST /comments
   def create
-    @comment = Comment.new(comment_params)
-
+    @image = Image.find(params[:image_id])
+    @comment = @image.comments.new(comment_params)
     if @comment.save
-      redirect_to @comment, notice: 'Comment was successfully created.'
+      flash[:notice] = 'Comment was successfully added.'
+      respond_to do |format|
+        format.html { redirect_to images_path  }
+        format.js
+      end
     else
       render :new
     end
@@ -53,6 +58,6 @@ class CommentsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def comment_params
-      params[:comment]
+      params.require(:comment).permit(:text)
     end
 end
