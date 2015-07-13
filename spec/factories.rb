@@ -1,4 +1,7 @@
-FactoryGirl.define do
+FactoryGirl.define do  factory :comment do
+    
+  end
+
   factory(:user) do
     name('Leroi')
     email('leroi@leroi.com')
