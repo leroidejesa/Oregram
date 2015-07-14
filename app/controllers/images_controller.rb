@@ -48,7 +48,10 @@ class ImagesController < ApplicationController
   def like
     @image = Image.find(params[:id])
     current_user.likes @image
-    redirect_to :back
+    respond_to do |format|
+      format.html { redirect_to :back }
+      format.js 
+    end
   end
 
 private

@@ -1,0 +1,4 @@
+$('#heart-link').hide();
+// $('.liked-heart').show();
+$('#like-count p').remove();
+$('#like-count').append('<p><%= @image.get_likes.size %> likes</p>');
