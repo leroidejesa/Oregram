@@ -20,6 +20,21 @@
           <p>none yet!</p>
         <% end %>
        </ul>
+       <!-- how many likes -->
+       <p><%= image.get_likes.size %> likes</p>
+
+       <!-- liked by who? -->
+       <p><% image.votes_for.up.by_type(User).voters.each do |liked_by| %></p>
+       <p><%= liked_by.name %></p>
+       <% end %>
+
+       <!-- like/heart button -->
+       <span><%= link_to like_user_image_path(image.user_id, image), method: :patch do %>
+            <i class="glyphicon glyphicon-heart-empty"></i>
+         <% end %>
+</span>
+
+
        <!-- <p class="heart glyphicon glyphicon-heart-empty"></p><span class="comment">Add a comment...</span> -->
        <p><%= link_to "Add a comment...", new_image_comment_path(image), id: "new_comment_link", class: "btn btn-default", remote: true %></p>
 

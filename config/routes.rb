@@ -4,11 +4,15 @@ Rails.application.routes.draw do
   get '/' => 'images#index'
 
   resources :users do
-    resources :images
+    resources :images do
+      member do
+        patch "like", to: "images#like"
+      end
+    end
   end
 
   resources :images do
-    resources :comments, except => [:show, :index]
+    resources :comments, :except => [:show, :index]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

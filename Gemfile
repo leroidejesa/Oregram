@@ -12,6 +12,7 @@ gem 'devise', '~> 3.4.1'
 gem "paperclip", "~> 4.3"
 gem "factory_girl_rails"
 gem "rails_12factor", group: :production #heroku deployment
+gem 'acts_as_votable', '~> 0.10.0'
 
 group :development do
   gem 'byebug'
