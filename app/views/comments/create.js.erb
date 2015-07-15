@@ -1,4 +1,4 @@
 $('form').remove();
 $('#new_comment_link').show();
 $('ul p').remove();
-$('#image_comments').append('<li><%= @comment.text %></li>');
+$('#image_comments').append('<%= @comment.text %>');

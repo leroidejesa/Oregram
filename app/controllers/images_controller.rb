@@ -2,8 +2,6 @@ class ImagesController < ApplicationController
   def index
     @images = Image.all.order(created_at: :desc)
     # @comment = Image.find(params[:id]).comments.new(comment_params)
-
-# sorts array by order created
   end
 
   def show
@@ -50,7 +48,7 @@ class ImagesController < ApplicationController
     current_user.likes @image
     respond_to do |format|
       format.html { redirect_to :back }
-      format.js 
+      format.js
     end
   end
 

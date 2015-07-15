@@ -6,7 +6,6 @@
 
           <div class="home-avatar" id="<%= image.id %>">
             <%= image_tag image.user.avatar.url(:thumb), class:"round-image-50"%><span class="upload-time"><%= distance_of_time_in_words(image.created_at, Time.now) %> ago</span>
-            <hr>
           </div>
           <%= image_tag image.image.url(:large), class: "each-img" %>
 
@@ -15,13 +14,13 @@
             <p><%= image.get_likes.size %> likes</p>
           </div>
           <!-- liked by who? -->
-          <p><% image.votes_for.up.by_type(User).voters.each do |liked_by| %></p>
+          <!-- <p><% image.votes_for.up.by_type(User).voters.each do |liked_by| %></p>
             <p><%= liked_by.name %></p>
-          <% end %>
+          <% end %> -->
 
           <!-- username and caption -->
-          <div class="description"><%= link_to image.user.name, user_path(image.user) %> <%= image.description %></div>
-          <hr>
+          <div class="description">#user and caption: <%= link_to image.user.name, user_path(image.user) %> <%= image.description %></div>
+
 
           <!-- comments -->
           <ul id="image_comments">
@@ -34,16 +33,20 @@
             <% end %>
           </ul>
 
+          <hr>
+
           <!-- like/heart button -->
           <div class="heart-and-comment">
-            <span><%= link_to like_user_image_path(image.user_id, image), method: :patch, id: "heart-link", remote: true do %>
+
+
+            <%= link_to like_user_image_path(image.user_id, image), method: :patch, id: "heart-link", remote: true do %>
               <i class="heart glyphicon glyphicon-heart-empty"></i>
-            <% end %></span>
+            <% end %>
 
-            <!-- <p class="heart glyphicon glyphicon-heart-empty"></p><span class="comment">Add a comment...</span> -->
+
             <%= link_to "Add a comment...", new_image_comment_path(image), id: "new_comment_link", class: "btn comment-btn btn-default", remote: true %>
-          </div>
 
+          </div>
         </div>
             <br><br><br>
       </div>

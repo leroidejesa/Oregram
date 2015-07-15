@@ -1,9 +1,5 @@
-<%= render 'layouts/errors', :object => @comment %>
+  <%= render 'layouts/errors', :object => @comment %>
 
-<%= form_for [@image, @comment], remote: true do |f| %>
-  <div class="form-group">
-    <%= f.label :text %>
-    <%= f.text_field :text %>
-  </div>
-  <p><%= f.submit :class => "btn btn-primary yeehaw" %></p>
-<% end %>
+  <%= form_for [@image, @comment], remote: true do |f| %>
+    <%= f.text_field :text, placeholder: "Add a comment...", autofocus: true %>
+  <% end %>

@@ -74,13 +74,24 @@ body {
 }
 
 .description {
-  padding-top:15px;
-  padding-bottom:3px;
-  padding-left:10px;
+  // padding-top:3px;
+  padding-bottom:8px;
+  padding-left:27px;
+}
+
+#image_comments {
+  padding-left: 27px;
+}
+
+#like-count {
+  padding-left: 27px;
+  padding-top: 20px;
 }
 
 .home-avatar {
-  padding: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 18px;
 }
 
 .upload-time {
@@ -128,12 +139,22 @@ a:hover {
 
 .heart {
   padding: 10px;
-  color: grey;
+  color: #E6E6E6;
+  font-size: 2em;
+  font-weight: lighter;
 }
 
 // not working
-.heart a:visited {
+// .heart a:visited {
+//   color: red;
+// }
+
+.liked-heart {
+  padding: 10px;
   color: red;
+  font-size: 2em;
+  font-weight: lighter;
+  // display: none;
 }
 
 // .heart a:hover {
@@ -155,16 +176,36 @@ a:hover {
 }
 
 .heart-and-comment {
-  display: inline;
+  // display: inline;
   margin-left: 15px;
-  padding-bottom: 10px;
+  padding: 0px;
 }
 
 .heart-and-comment a:hover {
   background-color: transparent;
 }
 
+
 // not working
-.heart-and-comment a:visited {
-  color: red;
+// .heart-and-comment a:visited {
+//   color: red;
+// }
+
+#comment-form {
+  display: inline;
+  float: right;
+  // margin-right: 60%;
+  // width: 90%;
+}
+
+#comment-form input {
+  border: none;
+  width: 473px;
+  margin-top: 14px;
+}
+
+#new_comment_link {
+  color: #B2B2B2;
+  margin-bottom: 15px;
+
 }
