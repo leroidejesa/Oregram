@@ -19,14 +19,14 @@
           <% end %> -->
 
           <!-- username and caption -->
-          <div class="description">#user and caption: <%= link_to image.user.name, user_path(image.user) %> <%= image.description %></div>
+          <div class="description"><%= link_to image.user.name, user_path(image.user), class:'usernames'%> <%= image.description %></div>
 
 
           <!-- comments -->
           <ul id="image_comments">
             <% if image.comments.any? %>
               <% image.comments.each do |comment| %>
-                <li><%= User.find(comment.user_id).name %> - <%= comment.text %></li>
+                <li><span class="usernames"><%= User.find(comment.user_id).name %></span> - <%= comment.text %></li>
               <% end %>
             <% else %>
               <p>none yet!</p>

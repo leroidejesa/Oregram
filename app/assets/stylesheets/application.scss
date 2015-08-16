@@ -47,7 +47,7 @@ ul {
 
 body {
   // background-color: rgb(235, 240, 250);
-  background-color: #FCF9F8;
+    background-color: #F8F8F8;
   padding: 0px;
 }
 
@@ -107,26 +107,40 @@ hr{
 #logo {
   padding: 12px;
   margin-top: 8px;
+  margin-left: 400px;
   color: white;
-  font-size: 3em;
-  font-family: "lucinda sans", san-serif, cursive;
+  font-size: 4em;
+  font-family: 'Grand Hotel', cursive;
 
+}
+
+.white {
+  margin-right: 400px;
 }
 
 .blue {
   background-color: #FFFFFF;
-  color: #3D1400;
-  height: 20px;
+  color: #4775D1;
+  height: 200px;
 
 }
 
 .blue a {
   margin-top:12px;
-  color: #3D1400;
+  color: #2B467D;
+}
+
+.usernames {
+  font-weight: bold;
+  color: #2B467D;
+}
+
+.usernames a,a:visited {
+  color: #2B467D;
 }
 
 .blue a:hover {
-  background-color: #2953A6;
+  background-color: #FFFFFF;
 }
 
 .home {
