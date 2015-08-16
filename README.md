@@ -1,6 +1,6 @@
-#GramOfThrones
+#Instagram-clone
 
-An Instagram-like photo-sharing app for all your favorite heroes (and villains) in Westeros. 
+An Instagram-like photo-sharing app. 
 
 Originally completed as a Ruby on Rails exercise at [Epicodus](http://www.epicodus.com), Portland, Oregon.
 
