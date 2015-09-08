@@ -83,6 +83,10 @@ body {
   padding-left: 27px;
 }
 
+#image_comments li {
+  padding-bottom: 8px;
+}
+
 #like-count {
   padding-left: 27px;
   padding-top: 20px;
@@ -128,16 +132,17 @@ hr{
 
 .blue a {
   margin-top:12px;
-  color: #2B467D;
+  color: #006666;
 }
 
 .usernames {
   font-weight: bold;
-  color: #2B467D;
+  color: #006666;
 }
 
 .usernames a,a:visited {
-  color: #2B467D;
+  color: #006666;
+  // padding-bottom: 8px;
 }
 
 .blue a:hover {
